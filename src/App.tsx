@@ -1,10 +1,13 @@
+import { Provider } from "react-redux";
 import "./App.css";
+import RootLayout from "./layout/RootLayout";
+import { store } from "./store/store";
 
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <Provider store={store}>
+      <RootLayout/>
+    </Provider>
   );
 }
 
