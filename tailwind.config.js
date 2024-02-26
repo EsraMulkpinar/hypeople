@@ -11,7 +11,15 @@ export default {
       },
       colors:{
         bluePrimary:"#1677FF",
-        bgWhite:"#F8F9FD"
+        softBlue:"#E3F0FF",
+        bgWhite:"#F8F9FD",
+        blueButton:"#0168FF",
+        text:{
+          darkGray:"#262626",
+          lightGray:"#8C8C8C",
+          midGray:"#666666"
+          
+        }
       }
     },
   },

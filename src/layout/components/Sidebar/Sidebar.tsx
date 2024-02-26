@@ -45,7 +45,7 @@ const SidebarComponent = () => {
   return (
     <Sider
       width={256}
-      className="h-full px-3 font-bold" 
+      className="h-full px-3 font-bold " 
       collapsible
       trigger={null}
       collapsed={collapsed}
@@ -56,6 +56,7 @@ const SidebarComponent = () => {
         className="py-4"
         theme="light"
         mode="inline"
+        defaultSelectedKeys={['0']}
         items={menuItemsTop}
       />
       <div className="flex-grow" />

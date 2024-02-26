@@ -3,11 +3,9 @@ import { Layout } from "antd";
 const { Footer } = Layout;
 const FooterComponent = ()=> {
   return (
-    <div>
-      <Footer className="text-center ">
-        Ant Design ©{new Date().getFullYear()} Created by Ant UED
+      <Footer className="text-center py-4">
+        Esra Nur Mülkpınar ©{new Date().getFullYear()}
       </Footer>
-    </div>
   );
 };
 
