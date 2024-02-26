@@ -17,12 +17,12 @@ const RootLayout = ({ children }: PropsWithChildren) => {
   }, [dispatch]);
 
   return (
-    <div className="w-screen h-screen">
-      <Layout className="w-screen h-screen">
+    <div className="w-screen h-screen ">
+      <Layout className="w-screen h-screen ">
         <HeaderComponent />
-        <Layout>
+        <Layout className="bg-bgWhite ">
           <SidebarComponent />
-          <DataTable companies={companies}/>
+          {/* <DataTable companies={companies}/> */}
           {children}
         </Layout>
         <FooterComponent />

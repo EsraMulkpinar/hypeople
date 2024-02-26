@@ -9,7 +9,7 @@ const { Header } = Layout;
 
 const HeaderComponent = () => {
   return (
-    <Header className="flex w-screen items-center bg-white justify-between">
+    <Header className="flex w-screen items-center bg-white justify-between border-black">
       <div className="flex items-center">
         <img className="mr-[6px] p-[6px]" src={LogoIcon} alt="Logo" />
         <div className="text-xl">Company CRM</div>

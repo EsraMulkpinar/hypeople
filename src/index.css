@@ -12,4 +12,10 @@
     font-family: 'Inter';
     src: url('../public/fonts/Inter/Inter.ttf') format('truetype');
   }
-  
+
+  :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light.ant-menu-root.ant-menu-inline, :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline, :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light.ant-menu-root.ant-menu-vertical, :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical {
+    border-inline-end: none;
+}
+  .mtSidebar{
+    margin-top: 384px;
+  }
