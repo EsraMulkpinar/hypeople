@@ -11,7 +11,7 @@ const CompaniesAdd = () => {
   const navigate = useNavigate();
   return (
     <div className="flex-1 mx-auto w-full h-screen flex flex-col justify-center items-center mb-20">
-      <div className="h-full">
+    <div className="overflow-auto">
       <Breadcrumb className="text-xs" separator={<RightOutlined />}>
           {breadcrumbItems.map((item) => (
             <Breadcrumb.Item key={item.label}>

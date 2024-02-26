@@ -12,6 +12,8 @@ const Home = () => {
     dispatch(getCompany());
   }, [dispatch]);
 
+  console.log(companies);
+  
   return (
     <div className="flex-1 mx-auto w-full h-screen flex flex-col justify-center items-center mb-20">
      <div className="overflow-auto">

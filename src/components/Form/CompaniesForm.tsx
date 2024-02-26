@@ -25,7 +25,7 @@ const CompaniesForm = () => {
   };
   return (
     <Form
-      className="md:w-[464px] h-full "
+      className="lg:w-[464px] sm:w-80 mt-8 "
       form={form}
       name="add_company_form"
       onFinish={onFinish}
@@ -46,14 +46,14 @@ const CompaniesForm = () => {
         name="companyName"
         label="Company Name"
       >
-        <Input />
+        <Input  className="h-[52px]"/>
       </Form.Item>
       <Form.Item
         className="my-2"
         name="typeOfCompany"
         label="Type of Company"
       >
-        <Select placeholder="Select a company type">
+        <Select className="h-[52px]" placeholder="Select a company type">
           <Option value="private">Private</Option>
           <Option value="public">Public</Option>
         </Select>
@@ -63,7 +63,7 @@ const CompaniesForm = () => {
         name="companySize"
         label="Company Size"
       >
-        <Select placeholder="Select a company size">
+        <Select className="h-[52px]" placeholder="Select a company size">
           <Option value="small">Small</Option>
           <Option value="medium">Medium</Option>
           <Option value="large">Large</Option>
@@ -74,7 +74,7 @@ const CompaniesForm = () => {
         name="industry"
         label="Industry"
       >
-        <Select placeholder="Select an industry">
+        <Select className="h-[52px]" placeholder="Select an industry">
           <Option value="technology">Technology</Option>
           <Option value="finance">Finance</Option>
         </Select>
@@ -90,28 +90,28 @@ const CompaniesForm = () => {
         name="website"
         label="Website"
       >
-        <Input />
+        <Input  className="h-[52px]"/>
       </Form.Item>
       <Form.Item
         className="my-2"
         name="clientManager"
         label="Client Manager"
       >
-        <Select placeholder="Select a client manager">
+        <Select className="h-[52px]" placeholder="Select a client manager">
           <Option value="manager1">Manager 1</Option>
           <Option value="manager2">Manager 2</Option>
         </Select>
       </Form.Item>
       <Form.Item className="w-full my-4">
         <Button
-          className="bg-bluePrimary md:pb-9 md:pt-4  md:w-[48%] mr-2"
+          className="bg-bluePrimary h-[52px]  md:w-[48%] mr-2"
           type="primary"
           htmlType="submit"
         >
           Save
         </Button>
         <Button
-          className="md:w-[48%] md:pb-9 md:pt-4 bg-softBlue text-bluePrimary border-none "
+          className="md:w-[48%] h-[52px] bg-softBlue text-bluePrimary border-none "
           htmlType="button"
           onClick={onReset}
         >

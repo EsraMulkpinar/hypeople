@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { instance } from "../constants/axios";
 export interface Company {
+  id:number
   logo: string;
   name: string;
   descriptionShort: string;
@@ -28,7 +29,7 @@ const companySlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getCompany.fulfilled, (state, action) => {
-      state.companies = action.payload.companies;
+      state.companies = action.payload.companies.map((company:Company) => ({...company,key:company.id.toString()}));
     });
   },
 });

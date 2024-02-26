@@ -14,7 +14,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           <HeaderComponent />
         </div>
         <Layout className="bg-bgWhite w-screen overflow-auto h-screen fixed left-0 top-[80px] bottom-0">
-          <div className="sticky top-0 z-10">
+          <div className="sticky top-0 z-10 md:flex hidden">
             <SidebarComponent />
           </div>
           

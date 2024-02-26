@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   return (
     <div className="py-4">
-      <div className="flex   items-center justify-between">
+      <div className="flex lg:flex-row flex-col  items-start space-y-3 lg:space-y-0 lg:items-center justify-between">
         <div className="flex items-center space-x-2">
           <img src={AvatarImage} alt="" />
           <div className="text-xl">Good Morning, Edward</div>

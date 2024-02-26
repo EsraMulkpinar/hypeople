@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   html {
     font-family: 'Inter', system-ui, sans-serif;
@@ -11,15 +12,14 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('../public/fonts/Inter/static/Inter-Medium.ttf') format('medium');
-  src: url('../public/fonts/Inter/Inter.ttf') format('truetype');
+  src: url('../public/fonts/Inter/Inter.ttf');
 
 }
 
-:where(.css-dev-only-do-not-override-1k979oh).ant-menu-light.ant-menu-root.ant-menu-inline,
-:where(.css-dev-only-do-not-override-1k979oh).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline,
-:where(.css-dev-only-do-not-override-1k979oh).ant-menu-light.ant-menu-root.ant-menu-vertical,
-:where(.css-dev-only-do-not-override-1k979oh).ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical {
+.ant-menu-light.ant-menu-root.ant-menu-inline,
+.ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline,
+.ant-menu-light.ant-menu-root.ant-menu-vertical,
+.ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical {
   border-inline-end: none;
 }
 
@@ -35,22 +35,22 @@
   display: none;
 }
 
-:where(.css-dev-only-do-not-override-1k979oh).ant-card .ant-card-body {
+.ant-card .ant-card-body {
   padding: 0;
   border-radius: 0 0 8px 8px;
 }
 
-:where(.css-dev-only-do-not-override-1k979oh).ant-layout .ant-layout-sider-light {
+.ant-layout .ant-layout-sider-light {
   background: #F8F9FD;
 }
 
-.ant-layout-sider-children :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light,
-.ant-layout-sider-children :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light>.ant-menu {
+.ant-layout-sider-children .ant-menu-light,
+.ant-layout-sider-children .ant-menu-light>.ant-menu {
   background: #F8F9FD;
 }
-:where(.css-dev-only-do-not-override-1k979oh).ant-menu-light.ant-menu-horizontal >.ant-menu-item, :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item, :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu, :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu {
+.ant-menu-light.ant-menu-horizontal >.ant-menu-item, .ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item, .ant-menu-light.ant-menu-horizontal >.ant-menu-submenu, .ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu {
   top: 10px;
 }
-:where(.css-dev-only-do-not-override-1k979oh).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub {
+.ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub {
   min-width: 50px;
 }

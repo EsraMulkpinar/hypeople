@@ -76,7 +76,7 @@ const SidebarComponent = () => {
         onClick={handleMenuClick} 
       />
        <Menu
-        className="pt-24"
+        className="2xl:pt-52 pt-24"
         theme="light"
         mode="inline"
         items={menuItemsBottom}

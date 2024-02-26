@@ -4,12 +4,18 @@ import { store } from "./store/store";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import CompaniesAdd from "./pages/CompaniesAdd";
+import { ConfigProvider } from "antd";
 
 
 
 function App() {
   return (
-    <Provider store={store}>
+    <ConfigProvider  theme={{
+      token: {
+        fontFamily: "Inter"
+      }
+    }}>
+      <Provider store={store}>
       <BrowserRouter>
         <RootLayout>
           <Routes>
@@ -19,6 +25,7 @@ function App() {
         </RootLayout>
       </BrowserRouter>
     </Provider>
+    </ConfigProvider>
   );
 }
 

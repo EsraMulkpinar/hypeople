@@ -4,7 +4,7 @@ import ArrowDownLight from "/assets/icons/ArrowDownLight.svg";
 
 const GeneralInsight = () => {
   return (
-    <Card className="min-w-[272px] px-4 flex flex-col space-y-4  rounded-xl ">
+    <Card className="min-w-[272px] px-4 flex flex-col space-y-4 py-4 lg:py-0  rounded-xl ">
       <div className="pt-3.5 ">General Insight</div>
       <div className="pt-2 pb-4 ">
         <div className="text-text-lightGray text-sm">Companies</div>
