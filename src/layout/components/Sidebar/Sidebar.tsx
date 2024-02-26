@@ -26,26 +26,41 @@ const SidebarComponent = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const toggleCollapsed = () => {
+    setCollapsed(!collapsed);
+  };
+
   const menuItemsTop = [
-    { key: "0", icon: <img src={Dashboard} />, label: "Dashboard" },
-    { key: "1", icon: <img src={Companies} />, label: "Companies" },
-    { key: "2", icon: <img src={Proposal} />, label: "Proposal" },
-    { key: "3", icon: <img src={Staff} />, label: "Staff" },
-    { key: "4", icon: <img src={Contacts} />, label: "Contacts" },
+    { key: "0", icon: <img src={Dashboard} alt="Dashboard" />, label: "Dashboard" },
+    { key: "1", icon: <img src={Companies} alt="Companies" />, label: "Companies" },
+    { key: "2", icon: <img src={Proposal} alt="Proposal" />, label: "Proposal" },
+    { key: "3", icon: <img src={Staff} alt="Staff" />, label: "Staff" },
+    { key: "4", icon: <img src={Contacts} alt="Contacts" />, label: "Contacts" },
   ];
 
   const menuItemsBottom = [
-    { key: "5", icon: <img src={ListIcon} />, label: "Components" },
-    { key: "6", icon: <img src={Authentication} />, label: "Authentication" },
-    { key: "7", icon: <img src={Settings} />, label: "Settings" },
-    { key: "8", icon: <img src={Help} />, label: "Help" },
-    { key: "9", icon: <img src={CollapseMenu} />, label: "Collapse Menu" },
+    { key: "5", icon: <img src={ListIcon} alt="Components" />, label: "Components" },
+    { key: "6", icon: <img src={Authentication} alt="Authentication" />, label: "Authentication" },
+    { key: "7", icon: <img src={Settings} alt="Settings" />, label: "Settings" },
+    { key: "8", icon: <img src={Help} alt="Help" />, label: "Help" },
+    {
+      key: "9",
+      icon: <img src={CollapseMenu} alt="Collapse Menu" />,
+      label: "Collapse Menu",
+      onClick: toggleCollapsed, // Collapse menüsü için onClick fonksiyonu eklendi
+    },
   ];
+
+  const handleMenuClick = ({ key }:any) => {
+    if (key === "9") {
+      toggleCollapsed();
+    }
+  };
 
   return (
     <Sider
       width={256}
-      className="h-full px-3 font-bold " 
+      className="h-full px-3 font-bold overflow-auto fixed top-0 left-0"
       collapsible
       trigger={null}
       collapsed={collapsed}
@@ -58,12 +73,14 @@ const SidebarComponent = () => {
         mode="inline"
         defaultSelectedKeys={['0']}
         items={menuItemsTop}
+        onClick={handleMenuClick} 
       />
-      <div className="flex-grow" />
-      <Menu
+       <Menu
+        className="pt-24"
         theme="light"
         mode="inline"
         items={menuItemsBottom}
+        onClick={handleMenuClick} 
       />
     </Sider>
   );

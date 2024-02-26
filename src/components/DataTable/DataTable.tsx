@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Avatar, Button, Card, Input, Table } from "antd";
 import type { TableColumnsType, TableProps } from "antd";
 import { Company } from "../../reducers/company";
@@ -7,6 +6,8 @@ import Dot from "/assets/icons/Dot.svg";
 import DownIcon from "/assets/icons/DownIcon.svg";
 import SearchIcon from "/assets/icons/SearchIcon.svg";
 import LightBlueButton from "../LightBlueButton/LightBlueButton";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 interface Props {
   companies: Company[] | null;
@@ -46,15 +47,15 @@ const DataTable = ({ companies }: Props) => {
         ) ??
           false)
     )
-    .slice(0, 5); // Apply search filter and limit to first 5 for display
+console.log(companies);
 
   const columns: TableColumnsType<Company> = [
     {
       title: undefined,
       key: "details",
       render: (_, record) => (
-        <div className="flex justify-between items-center lg:space-x-20 w-full space-y-4 pt-2 lg:flex-row flex-col">
-          <div className="flex">
+        <div className="flex justify-between items-center lg:space-x-[230px] w-full space-y-4 pt-2 lg:flex-row flex-col">
+          <div className="flex ">
             <div className="w-16 h-16 mr-4 border rounded-xl">
               {record.logo ? (
                 <img src={record.logo} alt="logo" className="lg:p-4 p-2 object-fill" />
@@ -74,7 +75,7 @@ const DataTable = ({ companies }: Props) => {
               </div>
             </div>
           </div>
-          <div className="flex items-center space-x-8">
+          <div className="flex lg:tems-center items-start space-x-8 lg:flex-row flex-col">
             <div className="flex space-x-2 items-center">
               <Avatar
                 className="border-none"
@@ -102,10 +103,11 @@ const DataTable = ({ companies }: Props) => {
   };
 
   return (
-    <Card  className="rounded-2xl py-4">
-      <div className="px-4  flex justify-between items-center">
+    <Card  className="rounded-2xl  ">
+      <div className="py-4">
+      <div className="px-4 d:flex-row flex-col flex justify-between items-center">
         <div>Companies</div>
-        <div className="flex items-center space-x-2">
+        <div className="flex md:flex-row flex-col w-full items-center space-x-2">
           <Input
             prefix={<img src={SearchIcon} alt="Search" />}
             placeholder="search"
@@ -115,16 +117,18 @@ const DataTable = ({ companies }: Props) => {
           />
           <LightBlueButton title="Filter" onclick={onFilterClick} icon={DownIcon}/>
          
-          <Button className="bg-blueButton text-white"> Add Company</Button>
+         <Link to={"/add"}> <Button className="bg-blueButton text-white"> Add Company</Button></Link>
         </div>
       </div>
       <div className="no-border-between-rows custom-table flex flex-col w-full justify-center">
         <Table
-          pagination={{ pageSize: 5, hideOnSinglePage: true }}
+        rowKey="Id"
+          pagination={{ pageSize: 6, hideOnSinglePage: true }}
           columns={columns}
           dataSource={filteredAndSortedCompanies}
           onChange={onChange}
         />
+      </div>
       </div>
     </Card>
   );

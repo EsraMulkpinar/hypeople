@@ -5,7 +5,7 @@ const YearlyIncome = () => {
   return (
     <Card className="min-w-[272px] rounded-xl overflow-hidden shadow-lg relative bg-card text-white">
       <img
-        src="../public/assets/images/Card.png"
+        src="/assets/images/Card.png"
         className="absolute w-full h-full object-fill lg:object-cover"
         alt="Card background"
       />

@@ -5,7 +5,7 @@ import ColumnChart from "../ColumnChart/ColumnChart";
 
 const CompaniesChart = () => {
   return (
-    <Card className="p-4 leading-none  rounded-xl ">
+    <Card className="p-4 leading-none  rounded-xl  ">
       <div className="pb-4">Number of Companies</div>
      <div className="flex items-center justify-between">
      <div className="flex items-baseline space-x-2">

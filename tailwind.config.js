@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'Inter': 'Inter',
+        'Inter': ['Inter', 'system-ui', 'sans-serif'],
       },
       colors:{
         bluePrimary:"#1677FF",

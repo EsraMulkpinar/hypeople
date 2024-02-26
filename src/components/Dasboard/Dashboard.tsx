@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   return (
     <div className="py-4">
-      <div className="flex items-center justify-between">
+      <div className="flex   items-center justify-between">
         <div className="flex items-center space-x-2">
           <img src={AvatarImage} alt="" />
           <div className="text-xl">Good Morning, Edward</div>
@@ -23,10 +23,10 @@ const Dashboard = () => {
           onclick={onclick}
         />
       </div>
-      <div className="my-3 text-xs text-text-lightGray">
+      <div className="my-3 text-xs text-text-lightGray ">
         Last login 10 May 2024
       </div>
-      <div className="lg:flex w-full lg:space-x-4 space-y-4 lg:space-y-0 h-[268px]">
+      <div className="lg:flex w-full lg:space-x-4 space-y-4 lg:space-y-0 lg:h-[268px]">
         <CompaniesChart />
         <GeneralInsight />
         <YearlyIncome/>

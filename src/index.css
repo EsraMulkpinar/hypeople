@@ -4,13 +4,16 @@
 
 @layer base {
   html {
-    font-family: "Inter";
+    font-family: 'Inter', system-ui, sans-serif;
+
   }
 }
 
 @font-face {
   font-family: 'Inter';
+  src: url('../public/fonts/Inter/static/Inter-Medium.ttf') format('medium');
   src: url('../public/fonts/Inter/Inter.ttf') format('truetype');
+
 }
 
 :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light.ant-menu-root.ant-menu-inline,
@@ -44,4 +47,10 @@
 .ant-layout-sider-children :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light,
 .ant-layout-sider-children :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light>.ant-menu {
   background: #F8F9FD;
+}
+:where(.css-dev-only-do-not-override-1k979oh).ant-menu-light.ant-menu-horizontal >.ant-menu-item, :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item, :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light.ant-menu-horizontal >.ant-menu-submenu, :where(.css-dev-only-do-not-override-1k979oh).ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu {
+  top: 10px;
+}
+:where(.css-dev-only-do-not-override-1k979oh).ant-menu-submenu-popup .ant-menu-vertical.ant-menu-sub {
+  min-width: 50px;
 }
